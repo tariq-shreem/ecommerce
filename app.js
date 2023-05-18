@@ -1,6 +1,7 @@
 const express = require('express');
 const { dbConnection } = require('./src/database/dbConnection');
 const app = express()
+ header("Access-Control-Allow-Origin: *");
 require('dotenv').config({path:"./config/.env"})
 const port = process.env.PORT;
 var morgan = require('morgan')
